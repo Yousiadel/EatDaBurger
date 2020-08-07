@@ -6,7 +6,7 @@
         </div>
         <div class="col-md-6 text-center" class="task">
             <div class="row">
-                {{#each burgerData}} {{!-- {{#unless this.devoured}} --}}
+                {{#each burgerData}} {{#unless this.devoured}}
                 <div class="col-md-9 text-center" id="leftBurgers">
                     <p> {{this.id}}. {{this.burger_name}} </p>
                     <!-- {{this.Date}} -->
@@ -18,7 +18,7 @@
                         <button type="submit" class="btn btn-success">Devour it!</button>
                     </form>
                 </div>
-                {{!-- {{/unless}} --}} {{/each}}
+                {{/unless}} {{/each}}
             </div>
         </div>
         <div class="col-md-6 text-center" class="task">

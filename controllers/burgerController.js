@@ -11,11 +11,7 @@ router.get("/", function (req, res){
 // Create all our routes and set up logic within those routes where required.
 router.get("/burgers", function (req, res) {
     burger.all(function (data) {
-        var hbsObject = {
-            burger: data
-        };
-        console.log(hbsObject);
-        res.render("index", hbsObject);
+        res.render("index",{burger_data:data});
     });
 });
 
@@ -28,7 +24,6 @@ router.post("/burgers/create", function (req, res) {
 });
 
 router.put("/burgers/:id", function (req, res) {
-
     burger.update(req.params.id, function (result) {
         res.status(200).end();
     });
