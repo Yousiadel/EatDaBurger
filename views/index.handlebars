@@ -6,7 +6,7 @@
         </div>
         <div class="col-md-6 text-center" class="task">
             <div class="row">
-                {{#each burgerData}} {{#unless this.devoured}}
+                {{#each burger_data}} {{#unless this.devoured}}
                 <div class="col-md-9 text-center" id="leftBurgers">
                     <p> {{this.id}}. {{this.burger_name}} </p>
                     <!-- {{this.Date}} -->
@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="col-md-6 text-center" class="task">
-            {{#each burgerData}} {{#if this.devoured}}
+            {{#each burger_data}} {{#if this.devoured}}
             <input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly> {{/if}} {{/each}}
         </div>
     </div>
@@ -41,40 +41,3 @@
         </div>
     </div>
 </div>
-
-
-{{!--
-<div class="jumbotron">
-    <h1 class="text-center">EatDaBurger!!!</h1>
-    <img src="../../public/20200117_095450.png">
-</div>
-
-<div class="container">
-
-    <div class="row">
-        <div class="col-md-5">
-            <h2>Burgers</h2>
-            <hr>
-            <ul>
-                {{#each burgers}}
-                <li>
-                    <p>ID: {{this.id}} {{this.burger}}</p>
-                </li>
-                {{/each}}
-            </ul>
-            <div id="burger-area"></div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-8">
-            <p> Burger Name</p>
-            <form action="/" method: "POST">
-                <textarea type="text" name="task"></textarea>
-                <br>
-                <button id="submit" class="btn btn-lg puu-right">Submit</button>
-            </form>
-        </div>
-    </div>
-
-</div> --}}
